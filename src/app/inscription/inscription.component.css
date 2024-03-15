@@ -1,0 +1,44 @@
+.user-form {
+    max-width: 400px;
+    margin-top: 10px;
+    margin: auto;
+  }
+  
+  .form-group {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-control-file {
+    width: 100%;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Add this to your global styles or component CSS */
+.toast-center {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  

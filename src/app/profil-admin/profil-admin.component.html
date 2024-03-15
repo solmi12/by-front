@@ -1,0 +1,21 @@
+<app-dashbord-admin>
+
+<div class="profile-card" *ngIf="user">
+  <div class="profile-header">
+    <h2>{{ user.firstname }} {{ user.lastName }}</h2>
+    <p>Email: {{ user.email }}</p>
+  </div>
+  
+  <div class="profile-content">
+    <div class="profile-image-container">
+      <img *ngIf="user.imageData" [src]="'data:image/png;base64,' + user.imageData" alt="User Image" class="profile-image" />
+    </div>
+    
+    <div class="profile-details">
+      <p>Birth Day: {{ user.birthday }}</p>
+      <p>Phone Number: {{ user.phoneNumber }}</p>
+      <p>Role: {{ user.role }}</p>
+    </div>
+  </div>
+</div>
+</app-dashbord-admin>

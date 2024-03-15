@@ -1,0 +1,38 @@
+<app-dashbord-admin>  
+  
+  
+    <h2>Add Product</h2>
+    <div class="add-tool-container">
+     
+      <form (ngSubmit)="onSubmit()" class="tool-form">
+  
+        <div class="form-group">
+          <label for="toolName">Product Name:</label>
+          <input type="text" id="toolName" [(ngModel)]="tool.toolName" name="toolName" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" [(ngModel)]="tool.description" name="description" required></textarea>
+        </div>
+  
+        <div class="form-group">
+          <label for="categoryName">Category Name:</label>
+          <input type="text" id="categoryName" [(ngModel)]="tool.category.categoryName" name="categoryName" required>
+        </div>
+  
+        <div class="form-group">
+            <label for="price">price:</label>
+            <input type="number" id="price" [(ngModel)]="tool.price" name="price" required>
+          </div>
+    
+        <div class="form-group">
+          <label for="image">Image:</label>
+          <input type="file" accept="image/*" (change)="onFileChange($event)" id="image" name="image">
+        </div>
+  
+        <button type="submit">Add Tool</button>
+      </form>
+    </div>
+ 
+</app-dashbord-admin>

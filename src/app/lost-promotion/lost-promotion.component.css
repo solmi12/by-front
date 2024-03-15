@@ -1,0 +1,22 @@
+
+/* lost-promotion.component.css */
+
+.table-container {
+    margin-top: 20px;
+  }
+  
+  .tools-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tools-table th, .tools-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .tools-table th {
+    background-color: #f2f2f2;
+  }
+  

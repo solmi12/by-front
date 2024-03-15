@@ -1,0 +1,38 @@
+    <app-navbar></app-navbar>
+
+    <div class="cart-container">
+    <div *ngIf="cartItems.length > 0" class="cart-items">
+        <h2>Your Cart </h2>
+        <ul>
+        <li *ngFor="let item of cartItems" class="cart-item">
+            <div class="item-details">
+            <p>{{ item.tool?.toolName }}</p>
+            <p>Quantity: {{ item.quantity }}</p>
+            <p>Price: {{ item.totalPriceCart | currency }}</p>
+            </div>
+            <!-- Add a delete button for each item -->
+            <button (click)="deleteItemFromCart(item.cartId)">Delete</button>
+        </li>
+        </ul>
+    </div>
+    <div *ngIf="cartItems.length === 0" class="empty-cart">
+        <p>No items in the cart.</p>
+    </div>
+
+    <!-- Display totalOfTotalPrice -->
+    <div *ngIf="userCartItems" class="total-price">
+        <p>Total Price: {{ userCartItems.totalOfTotalPrice | currency }}</p>
+    </div>  
+
+      <!-- Button to trigger invoice creation with confirmation -->
+  <div class="create-invoice-button">
+    <button (click)="confirmCreateInvoice()" class="btn">Confirm</button>
+  </div>
+
+        <div *ngIf="showPopup" class="popup">
+            Cart deleted succefully 
+        </div>
+        <div *ngIf="showPopup" class="popup">
+            Invoice created successfully
+        </div>
+    </div>

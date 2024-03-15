@@ -1,0 +1,69 @@
+/* Styles for the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffc0cb; /* Pink background color */
+}
+
+/* Styles for the header */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Styles for the header buttons */
+.header-button {
+  color: #fff;
+  background-color: #a50c0e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+  background-color: #8c0910;
+}
+
+/* Styles for the content */
+.content {
+  max-width: 800px;
+  text-align: center;
+}
+.title {
+  color: #8c0910; /* Adjust color as needed */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the title bold */
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+/* Styles for the button */
+.styled-button {
+  color: #fff;
+  background-color: #c74e7c;
+  padding: 15px 30px;
+  margin-top: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+  background-color: #8c0910;
+}
+
+/* Styles for the paragraph */
+.paragraph {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}

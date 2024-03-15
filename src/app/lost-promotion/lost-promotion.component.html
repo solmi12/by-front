@@ -1,0 +1,30 @@
+<!-- lost-promotion.component.html -->
+<app-dashbord-admin>
+<div class="table-container">
+    <table class="tools-table">
+      <thead>
+        <tr>
+          <th>Tool Name</th>
+          <th>Price</th>
+
+          <th>Discounted Price</th>
+          <th>Promotion End Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tool of tools">
+          <td>{{ tool.toolName }}</td>
+          <td>{{ tool.price }}</td>
+         
+        
+          <td>{{ tool.discountedPrice }}</td>
+          <td>{{ tool.promotionEndDate }}</td>
+          <td>
+            <button (click)="updateToolWithoutPromotion(tool.toolId!)">Cancel Promotion</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-dashbord-admin>

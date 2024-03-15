@@ -1,0 +1,54 @@
+  <app-navbar></app-navbar>
+
+  <div class="search-container">
+      <input type="text" placeholder="Search by Tool Name" [(ngModel)]="searchToolName" />
+      <button (click)="searchToolsByToolName()">Search</button>
+    </div>
+    
+    <div class="categories-container">
+      <div class="category" *ngFor="let category of categories" (click)="filterToolsByCategory(category.categoryName)">
+        {{ category.categoryName }}
+      </div>
+    </div>
+    
+
+    <div class="haj-details" *ngIf="tools.length > 0; else noToolsFound">
+      <div class="haj-card" *ngFor="let tool of tools">
+        <div class="haj-image-container">
+          <img *ngIf="tool.imageData" [src]="'data:image/png;base64,' + tool.imageData" alt="Haj Image" class="haj-image" />
+        </div>
+        <div class="haj-text">
+          <div class="haj-name">{{ tool.toolName }}</div>
+          <div class="haj-description">
+            {{ tool.description.length > 50 ? tool.description.substring(0, 50) + '...' : tool.description }}
+          </div>
+            
+        </div>
+        <button [routerLink]="['/tools', tool.toolId]">Details</button>
+        <div *ngIf="tool.discountedPrice !== 0" class="haj-price-promotion-container">
+          <!-- Display price at the left -->
+          <div class="haj-price">{{ tool.price }}</div>
+          <!-- Display promotion details at the right -->
+          <div class="haj-promotion">
+            <div *ngIf="tool.promotionStartDate">{{ tool.promotionStartDate }}</div>
+            <div *ngIf="tool.promotionEndDate">{{ tool.promotionEndDate }}</div>
+            <div *ngIf="tool.discountedPrice">-{{ tool.discountedPrice }}%</div>
+            <div *ngIf="tool.totalPrice">{{ tool.totalPrice }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noToolsFound>
+      <div class="no-tools-found">No Tools Found!</div>
+    </ng-template>
+    
+    
+    
+    <ng-template #noToolsFound>
+      <div class="no-tools-found">No Tools Found!</div>
+    </ng-template>
+
+
+
+
+

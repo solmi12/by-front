@@ -1,0 +1,29 @@
+<!-- Import Angular Material Button and Dialog modules at the top of your file -->
+
+<app-dashbord-admin>
+<table class="mat-elevation-z8">
+  <thead>
+    <tr>
+      <th>Tool Name</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tool of tools">
+      <td>{{ tool.toolName }}</td>
+      <td>{{ tool.price }}</td>
+      <td>
+        <button mat-icon-button (click)="openDeleteConfirmationDialog(tool)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button [routerLink]="['/promotion', tool.toolId]" class="promotion-button">
+          <mat-icon class="promotion-icon">promotion</mat-icon>
+          Add Promotion
+        </button>
+      </td>
+      
+    </tr>
+  </tbody>
+</table>
+</app-dashbord-admin>

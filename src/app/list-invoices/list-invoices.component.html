@@ -1,0 +1,21 @@
+<app-dashbord-admin>
+    <!-- Your dashboard content goes here -->
+    <div class="invoice-list-container">
+      <h2>List of Invoices</h2>
+      <div *ngIf="invoices$ | async as invoices; else loading">
+        <ul class="invoice-list">
+          <li *ngFor="let invoice of invoices" class="invoice-item">
+            <div class="invoice-details">
+              <p><strong>Name:</strong> {{ invoice.name }}</p>
+              <p><strong>Email:</strong> {{ invoice.email }}</p>
+              <p><strong>Phone Number:</strong> {{ invoice.numPohne }}</p>
+              <p><strong>Price:</strong> {{ invoice.price | currency }}</p>
+            </div>
+            <button (click)="deleteInvoice(invoice.invId!)" class="delete-button">Delete</button>
+          </li>
+        </ul>
+      </div>
+      <ng-template #loading>Loading invoices...</ng-template>
+    </div>
+  </app-dashbord-admin>
+  

@@ -1,0 +1,37 @@
+/* navbar.component.css */
+
+/* Styles for the navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f5f7; /* Change the background color as needed */
+    padding: 10px;
+    color: #bc1a1a; /* Change the text color as needed */
+  }
+  
+  /* Styles for the logo container */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Styles for the logo text */
+  .logo-text {
+    font-size: 24px; /* Adjust the font size of the text */
+    font-weight: bold;
+  }
+  
+  /* Styles for the navigation links */
+  .nav-links a {
+    color: #151111; /* Change the text color of links */
+    text-decoration: none;
+    margin: 0 100px;
+    font-size: 24px;
+  }
+  
+  /* Hover effect for navigation links */
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  

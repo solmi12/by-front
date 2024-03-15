@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div *ngIf="tool" class="tool-details-container">
+    <div class="image-container">
+        <img *ngIf="tool.imageData" [src]="'data:image/png;base64,' + tool.imageData" alt="Haj Image" class="haj-image" />
+    </div>
+    <div class="details">
+        <h2>{{ tool.toolName }}</h2>
+        <p>{{ tool.description }}</p>
+        <h3>price:{{tool.price}}</h3>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" [(ngModel)]="quantity" (change)="calculateTotalPrice()" />
+
+        <!-- Display total price -->
+        <h3>{{ totalPrice }}</h3>
+
+        <button (click)="addToCart()">Add to Cart</button>
+        <div *ngIf="showPopup" class="popup">
+            Product  added to cart successfully
+          </div>
+          
+    </div>
+</div>

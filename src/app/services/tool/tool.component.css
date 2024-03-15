@@ -1,0 +1,197 @@
+/* Add this to your CSS file */
+/* list-hajj-user.component.css */
+
+body {
+    background-color: #f1f4f6; /* Set the background color of the entire page to gray */
+  }
+  
+  .image-container {
+    text-align: center;
+    background-color: #ffffff; /* Set a white background for the image container */
+    padding: 0; /* Remove padding to eliminate the gap */
+    margin: 0; /* Remove margin for spacing */
+  }
+  /* Add this to your component's CSS file */
+  .haj-details-button-container {
+    position: relative;
+  }
+  
+  .haj-details-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  
+  .image {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+  }
+  
+  .haj-details {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f1f4f6; /* Set the background color of the haj-details area to gray */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Add padding for spacing inside the haj-details area */
+  }
+  
+  .haj-card {
+    flex: 0 1 calc(33.33% - 20px); /* Three columns with spacing */
+    margin: 10px;
+   
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Avoid extra margin affecting width */
+    background-color: #ffffff; /* Set a white background for the individual haj-card */
+    border-radius: 5px; /* Add a slight border radius for a softer edge */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .haj-image-container {
+    text-align: left; /* Align the image to the left */
+  }
+  
+  .haj-image {
+    max-width: 100%; /* Make all images the same width */
+    height: 300px; /* Increase the height of the images to make them appear larger in length */
+    flex-grow: 1; /* Make the image occupy available vertical space */
+  }
+  
+  .haj-text {
+    margin-top: 10px;
+    text-align: left; /* Align hajName, price, and description to the left */
+  }
+  
+  .haj-name, .haj-price {
+    font-weight: 400; /* Set font-weight to 400 */
+    font-family: "Quicksand", sans-serif; /* Set font-family */
+    color: #f44336; /* Set text color to #F44336 */
+    font-size: 1.2em; /* Increase the font size for hajName and price */
+  }
+  
+  .haj-description {
+    margin-top: 5px;
+    font-size: 1em;
+    color: black;
+    flex-grow: 0;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Display an ellipsis (...) when text overflows */
+    max-width: 100%; /* Limit the maximum width */
+    width: 200px; /* Adjust the width to control the number of words displayed */
+  }
+  .categories-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow categories to wrap onto the next line */
+    gap: 10px; /* Adjust the gap between categories */
+  }
+  
+  .search-container {
+    font-size:medium;
+    position: relative;
+    top: 10px; 
+    left: 35%; 
+  }
+  
+  .categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center categories horizontally */
+  }
+  
+  .haj-card {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .haj-price-promotion-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .haj-price {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+  
+  .category {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-basis: calc(16.666% - 10px);
+    max-width: calc(16.666% - 10px);
+    box-sizing: border-box;
+    background-color: #fff; /* Add background color for better visibility */
+  }
+  
+  /* Add this to your CSS file */
+.promotion-details-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+
+}
+
+.tool-details {
+  flex-grow: 1;
+}
+
+.tool-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.tool-description {
+  margin-top: 5px;
+}
+
+.tool-price {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #f44336;
+}
+
+.additional-details {
+  text-align: right;
+}
+
+.discounted-price,
+.total-price,
+.promotion-date {
+  margin-top: 10px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+  .category {
+    padding: 10px;
+    margin-top: 30px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    flex-basis: calc(16.666% - 10px); /* Ensure each category takes up 1/6th of the container */
+    max-width: calc(16.666% - 10px); /* Ensure each category takes up 1/6th of the container */
+    box-sizing: border-box; /* Include padding and border in the total width */
+  }
+  
+  .no-tours-found {
+    margin-top: 50px;
+    color: #F44336;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }

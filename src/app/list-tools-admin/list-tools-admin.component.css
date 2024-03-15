@@ -1,0 +1,59 @@
+/* Add some basic styling to the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the buttons in the table */
+  button {
+    cursor: pointer;
+  }
+  
+  /* Center the buttons in the table cells */
+  td button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  /* Add this to your component.css file */
+
+/* Styles for the promotion button */
+.promotion-button {
+  background-color: #4caf50; /* Set your desired background color */
+  color: #fff; /* Set text color to white or a contrasting color */
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the promotion button */
+.promotion-button:hover {
+  background-color: #45a049; /* Set a slightly darker color on hover */
+}
+
+/* Styles for the promotion icon */
+.promotion-icon {
+  margin-right: 5px; /* Adjust margin for better spacing */
+}
+
+  
+  /* Add some spacing between the buttons */
+  td button:not(:last-child) {
+    margin-right: 8px;
+  }
+  

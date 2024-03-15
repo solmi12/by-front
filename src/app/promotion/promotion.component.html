@@ -1,0 +1,23 @@
+
+<app-dashbord-admin>
+<div class="promotion-container">
+    <h2>Add Promotion</h2>
+  
+    <div class="form-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" [(ngModel)]="promotionStartDate" name="startDate" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" [(ngModel)]="promotionEndDate" name="endDate" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="discountedPrice">Discounted Price:</label>
+      <input type="number" id="discountedPrice" [(ngModel)]="discountedPrice" name="discountedPrice" required>
+    </div>
+  
+    <button class="add-promotion-btn" (click)="addPromotion()">Add Promotion</button>
+  </div>
+</app-dashbord-admin>
